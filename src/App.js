@@ -32,14 +32,20 @@ class App extends Component {
       <div className="App">
         <button onClick={this.handleClick}>Toggle the person's photo</button>
         <br />
-        {this.state.Show ? (
-          <img
-            src={this.state.imgSrc}
-            alt="femme metisse"
-            style={{ margin: 10 }}
-          />
-        ) : null}
-        <h1>The component has been rendered for {this.state.count} seconds</h1>
+        <div>
+          {this.state.Show ? (
+            <>
+              <img
+                src={this.state.imgSrc}
+                alt="femme metisse"
+                style={{ margin: 10 }}
+              />
+              <h1>
+                The component has been rendered for {this.state.count} seconds
+              </h1>
+            </>
+          ) : null}
+        </div>
       </div>
     );
   }
